@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BitChat Employee Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap" rel="stylesheet">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="images/logo.png" alt="BitChat Logo">
+            </div>
+            <nav class="menu">
+                <a href="../Dashboard/index.html" class="menu-item">
+                    <img src="images/notification.png" alt="Dashboard">
+                    <span>Notification</span>
+                </a>
+                <a href="../Messages/index.html" class="menu-item active">
+                    <img src="images/Messages.png" alt="Messages">
+                    <span>Messages</span>
+                </a>
+                <a href="../Document/index.html" class="menu-item">
+                    <img src="images/Documents.png" alt="Documents">
+                    <span>Documents</span>
+                </a>
+            </nav>
+            <div class="logout" onclick="logout()">
+                <img src="images/LogOut.png" alt="Log Out">
+                <span>Log out</span>
+            </div>
+        </div>
+        
+        <div class="chat-list">
+            <div class="chat-header">
+                <input type="text" placeholder="" class="search-input">
+                <img src="images/search.png" alt="Search Icon" class="search-icon">
+            </div>
+                       
+            <div class="chat-item new-message">
+                <img src="images/Chat Bubble Typing Oval.png">
+                <div class="chat-text">
+                    <span class="chat-text">New message</span> 
+                    <span class="time-sent">just now</span>
+                </div>
+            </div>
+            <div class="underline">
+                <h1>___________________</h1>
+            </div>
+        
+            <div class="chat-item-history">
+                <span>History</span>
+            </div>
+        
+            <div class="chat-item">
+                <img src="images/workspace-desk--workspace-desk-work.png">
+                <div class="chat-text-his">
+                    <span>IT team</span>
+                    <span class="time-sent">2 hours ago</span>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- Chat Window -->
+        <div class="chat-window">
+            <div class="chat-message assistant">
+                <span class="message-icon"><img src="images/icon.png"></span>
+                This is an automated assistant. <br>
+                You're currently chatting with AI to get instant support. If you'd like to connect with an HR representative directly, you can do so by selecting the appropriate option. Please note that our team will respond to your inquiry within 24 hours.
+            </div>
+
+            <div class="suggest-question">
+                <strong>Suggest Question</strong>
+                <div class="question-buttons">
+                    <button>Report an IT issue..</button>
+                    <button>Company Benefits..</button>
+                    <button>Office Policies..</button>
+                    <button>Consult HR..</button>
+                    <button>Financials..</button>
+                    <button>Company Forms..</button>
+                </div>
+            </div>
+
+            <div class="chat-input">
+                <input type="text" placeholder="Send your messages...">
+                <button class="send-button">
+                    <img src="images/Send 01.png">
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
