@@ -1,0 +1,440 @@
+/* ========================
+   GENERAL STYLES
+======================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sen', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f0f2f5;
+    overflow-x: hidden;
+}
+
+/* ========================
+   MAIN CONTAINER
+======================== */
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background: #F6FDFF;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #3F72AF;
+    max-width: 100%;
+}
+
+/* ========================
+   SIDEBAR STYLES
+======================== */
+.sidebar {
+    width: 250px;
+    background: #112D4E;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Logo Section */
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 130px; 
+}
+/* ========== NAVIGATION MENU ========== */
+.menu {
+    flex-grow: 1;
+}
+
+.menu-item,
+.logout {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    color: #F5EFE7;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.menu-item img,
+.logout img {
+    width: 24px;
+    margin-right: 10px;
+}
+
+.menu-item.active,
+.menu-item:hover,
+.logout:hover {
+    background: #DBE2EF;
+    border-radius: 16px;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.menu-item.active {
+    background: #3F72AF;
+}
+
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px;
+    position: absolute;
+    top: 90px;  /* Slightly lower from the top */
+    right: 140px; /* Slightly inward from the right */
+}
+
+.greeting {
+    margin: 0;
+    font-size: 30px;
+    color: #333;
+}
+
+
+.sophia-name {
+    font-weight: bold;
+    font-size: 30px;
+    color: #007BFF;
+    cursor: pointer;
+}
+
+.profile-img {
+    margin-left: 10px;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+
+.DocumentIcon {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 330px;
+    top: 10%;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    background: #102c4a;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    position: relative;
+}
+
+.icon img {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 56%;  /* Moves the image to the center vertically */
+    left: 50%; /* Moves the image to the center horizontally */
+    transform: translate(-50%, -50%); /* Ensures it is centered inside the circle */
+}
+
+.Document-text {
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+}
+
+.Document-text2 {
+    font-size: 15px;
+    margin-top: 50px;
+    margin-left: -145px;
+    color: black;
+}
+
+/* Container for the document type section */
+.document-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+    margin-left: 145px;
+    margin-top: 200px;
+}
+
+/* Label styling */
+.text-label {
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+}
+
+/* Dropdown container */
+.document-dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #DBE2EF; /* Light grey background */
+    padding: 12px 15px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px; /* Adjust width as needed */
+    border: 1px solid #DBE2EF; /* Light border */
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+/* Dropdown arrow icon */
+.document-dropdown img {
+    margin-left: 500px;
+}
+
+/* Hover effect */
+.document-dropdown:hover {
+    border-color: #7a8ca0;
+}
+
+.Reason-Details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+    margin-left:-547px;
+    margin-top:300px;
+}
+
+/* Textarea Styling */
+.Reason-Details textarea {
+    background-color: #DBE2EF; /* Light grey background */
+    padding: 12px 15px;
+    border-radius: 8px;
+    height: 150px;
+    width: 400%;
+    max-width: 600px; /* Same as dropdown */
+    border: 1px solid #DBE2EF;
+    font-size: 16px;
+    color: #000;
+    resize: none; /* Prevent resizing */
+    transition: 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.Reason-Details textarea:hover,
+.Reason-Details textarea:focus {
+    border-color: #7a8ca0;
+    outline: none;
+}
+
+.choose-file {
+    display: flex;
+    margin-top: 520px;
+    margin-left: -227px;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.choose-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #0a2a52;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    width: 150px;
+}
+
+.choose-button:hover {
+    background-color: #084185;
+}
+
+#file-name {
+    margin-top: -46px;
+    margin-left: 180px;
+    padding: 8px;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+
+/* Profile Dropdown */
+
+.profile-dropdown {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 180px; /* Adjust positioning */
+    right: 160px;
+    width: 323px;
+    height: 200px;
+    flex-shrink: 0;
+    background: #F0F5FF;
+    border: 3px solid #112D4E;
+    border-radius: 10px 0px 10px 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    z-index: 1000;
+    transition: right 0.5s ease-in-out;
+}
+
+/* Show the dropdown when active */
+.profile-dropdown.show {
+    display: block;
+}
+
+/* Dropdown Content */
+.profile-dropdown .dropdown-content {
+    text-align: center;
+}
+
+/* Profile Image */
+.profile-dropdown img.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Profile Name */
+.profile-dropdown h3 {
+    color: #112D4E;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+/* Profile Role */
+.profile-dropdown p {
+    font-size: 14px;
+    color: #3F72AF;
+    margin-bottom: 10px;
+}
+
+/* Dropdown Options */
+.profile-dropdown .dropdown-item {
+    padding: 10px 15px;
+    text-align: left;
+    font-size: 14px;
+    color: #112D4E;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    border-radius: 10px;
+}
+
+.profile-dropdown .dropdown-item:hover {
+    background: #DBE2EF;
+}
+
+/* Close Button */
+.profile-dropdown .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #112D4E;
+    transition: color 0.3s ease-in-out;
+}
+
+.profile-dropdown .close:hover {
+    color: #3F72AF;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    margin-top: -35px;
+    margin-left: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.popup-content img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.popup-content h2 {     
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.popup-content p {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+button {
+    background: navy;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reset-button {
+    width: 363.485px;
+    height: 71px;
+    background-color: #f0f2f5;
+    color: red;
+    font-size: 24px; /* Increased font size */
+    font-weight: bold; /* Optional: Makes text bolder */
+    border: 2px solid red; /* Added red border */
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+    /* Positioning */
+    position: absolute;
+    left: 1150px;
+    bottom: 124px;
+}
+
+
+
+.submit-button {
+    width: 363.485px;
+    height: 71px;
+    background-color: #112D4E;
+    color: white;
+    font-size: 24px; /* Increased font size */
+    font-weight: bold; /* Optional: Makes text bolder */
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+    /* Positioning */
+    position: absolute;
+    left: 590px;
+    bottom: 124px;
+}
+
+.submit-button:hover {
+    background-color: #007bff;
+}
